@@ -8,6 +8,7 @@ public class UserController {
 	// comentario git
 	@GetMapping("/hola")
 	public String saludar() {
+
 		System.out.println("XXXX");
 		return "hola";
 	}
