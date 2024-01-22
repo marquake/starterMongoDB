@@ -44,8 +44,15 @@ public class UserController {
 	public String modificarUser(){
 
 		User userSaved = null;
-		//User userFound = userRepository.findById("22").orElse(null);
-		User userFound = userRepository.findByCod("2");
+
+		// esta forma debería desaparecer. He creado a modo de prueba el campo clave
+		// con Integer y String a la vez. La base de datos me ha dejado pero desde java
+		// da problemas...
+		//
+		//User userFound = userRepository.findById((String) "22").orElse(null);
+
+		// Esta forma es correcta
+		//User userFound = userRepository.findByCod("2");
 
 		if (userFound != null){
 			userFound.setName( userFound.getName().concat("_modified"));
